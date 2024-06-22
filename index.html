@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue JS 8</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="assets/style.css" />
+    <!-- Import Vue.js -->
+    <!-- <script src="js/vue.global.js"></script> -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="nav-bar"></div>
+      <div class="cart">Cart({{ cart }})</div>
+
+        <!-- Components -->
+        <!-- <mybutton></mybutton> -->
+        <!-- <cliqued-button></cliqued-button> -->
+        <product-display :premium="premium" @add-to-cart="addtocart"  @remove-to-cart="removetocart"></product-display>
+    </div>
+
+    <!-- Import Js -->
+    <script src="js/main.js"></script>
+
+    <!-- Import Components -->
+    <script src="components/productDisplay.js"></script>
+    <script src="components/review-form.js"></script>
+    <script src="components/reviewlist.js"></script>
+   
+
+    <!-- Mount App -->
+    <script>
+      // On va monter notre app dans le DOM
+      const mountedApp = app.mount("#app");
+    </script>
+  </body>
+</html>
